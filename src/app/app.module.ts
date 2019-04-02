@@ -11,6 +11,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { LoaderServiceService } from './services/loader-service.service';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,12 @@ import { LoaderServiceService } from './services/loader-service.service';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    HttpClientModule
   ],
-  providers: [LoaderServiceService],
+  providers: [LoaderServiceService,
+    {provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
