@@ -1,0 +1,48 @@
+<div class="" id="mysection">
+<form [formGroup]="signUpForm" class="border border-light p-5" style="border: 1px solid grey !important">
+
+    <p class="h4 mb-4 text-center">Sign up</p>
+
+    <input type="text" id="defaultRegisterFormFirstName" class="form-control mb-3" placeholder="First name">
+
+    <input type="text" id="defaultRegisterFormLastName" class="form-control mb-3" placeholder="Last name">
+
+    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-3" placeholder="E-mail">
+
+    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+
+    <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Password should be at least 6 characters</small>
+
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+        <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+    </div>
+
+    <button class="btn btn-info my-4 btn-block" type="submit">Sign up</button>
+
+    <div class="text-center">
+        <p>or sign up with:</p>
+
+        <a class="light-blue-text mx-2">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a  class="light-blue-text mx-2">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a class="light-blue-text mx-2">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a  class="light-blue-text mx-2">
+            <i class="fa fa-github"></i>
+        </a>
+
+        <hr>
+
+        <p>By clicking
+            <em>Sign up</em> you agree to our
+            <a href="" target="_blank">terms of service</a> and
+            <a href="" target="_blank">terms of service</a>.
+        </p>
+    </div>
+</form>
+</div>
