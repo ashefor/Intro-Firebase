@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private fb: FormBuilder) { }
 
   ngOnInit() {
   }
@@ -18,6 +19,12 @@ export class HomeComponent implements OnInit {
   //     console.log(data)
   //   })
   // }
-
   
+  subscriptionForm = this.fb.group({
+    email: ['', Validators.compose([Validators.required])],
+  })
+
+  submitForm(){
+    window.alert('me')
+  }
 }

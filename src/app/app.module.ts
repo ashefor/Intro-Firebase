@@ -13,6 +13,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { LoaderServiceService } from './services/loader-service.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoaderInterceptor } from './interceptors/loader.interceptor';
     routercomponents,
     SignupComponent,
     PagenotfoundComponent,
-    LoaderComponent
+    LoaderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

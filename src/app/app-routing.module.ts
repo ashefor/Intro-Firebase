@@ -4,12 +4,14 @@ import { LoginComponent } from './account/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './account/signup/signup.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'account/signin', component:LoginComponent},
-  {path: 'account/signup', component:SignupComponent},
+  {path: 'about', component: AboutComponent},
+  // {path: 'account/signin', component:LoginComponent},
+  // {path: 'account/signup', component:SignupComponent},
   {path: "**", component:PagenotfoundComponent}
 ];
 
@@ -18,4 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routercomponents = [LoginComponent, HomeComponent, SignupComponent, PagenotfoundComponent]
+export const routercomponents = [LoginComponent, HomeComponent, SignupComponent, PagenotfoundComponent, AboutComponent]

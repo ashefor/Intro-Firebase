@@ -59,6 +59,7 @@ li{
     padding-right: 2rem;
     font-family: 'Montserrat', sans-serif;
 }
+
 .subscription-form{
     background: #e2e9fa;
     padding: 15px;
@@ -223,35 +224,27 @@ li{
     text-decoration: none;
     padding: 15px;
 }
-.container{
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.about-me{
     margin-top: 50px;
-    grid-column-gap: 25px;
-    grid-row-gap: 25px;
     padding: 0;
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-    .container{
+    .about-me{
         padding: 25px;
         grid-template-columns: 1fr;
     }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px){
-    .container{
+    .about-me{
         padding: 25px;
         grid-template-columns: 1fr;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px){
-    .container{
+    .about-me{
         padding: 25px;
     }
 }
-
 .card{
     width: 100%;
 }
@@ -260,44 +253,6 @@ li{
 }
 .share-post{
     margin-left: auto;
-    margin-right: 5px;
-}
-.share-post i{
-    font-size: 1.2rem;
-    padding: .5rem;
-}
-.share-post>i:hover{
-    cursor: pointer;
-    color: #60adf0
-}
-.sharethispost:hover{
-    cursor: pointer;
-}
-.sharethispost{
-    font-family: 'Montserrat', sans-serif;
-}
-.share-post-icons{
-    display:flex; 
-    padding: 30px;
-    justify-content: space-between
-}
-.share-post-icons i{
-    color: white;
-}
-.twitter{
-    background: #55acee;
-    padding: 10px;
-    border-radius: 50%;
-}
-.facebook{
-    background: #4464a3;
-    padding: 10px;
-    border-radius: 50%;
-}
-.sharelink{
-    background: #333333;
-    padding: 1rem;
-    border-radius: 50%;
 }
 .card-bottom{
     display: flex;
