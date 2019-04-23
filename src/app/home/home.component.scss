@@ -2,10 +2,7 @@
 #page-nav label, #hamburger {
     display: none;
   }
-.hamburgerguy{
-    display: none;
 
-}
 .hiddenmenus{
     display: none;
 }
@@ -91,7 +88,9 @@ a:hover{
     }
     
     #page-nav label {
-        display: inline-block;
+        display: block;
+        padding: 8px 25px;
+        float: right;
       }
       #page-nav ul li {
         display: block;
