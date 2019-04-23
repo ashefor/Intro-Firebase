@@ -43,7 +43,7 @@ ul li ul.dropdown li{
     display: block;
 }
 .hidespost{
-    display: none;
+    display: none !important;
 }
 a:hover{
     cursor: pointer;
@@ -75,16 +75,6 @@ a:hover{
     }
     a:hover{
         cursor: pointer
-    }
-    #social-icons span{
-        display: none;
-    }
-    .hidepost{
-        display: none !important;
-    }
-    .hamburgerguy{
-        margin-left: auto;
-
     }
     
     #page-nav label {
@@ -121,9 +111,25 @@ a:hover{
     #test{
         padding: 25px;
     }
-    .hidepost{
-        display: none !important;
-    }
+    #page-nav label {
+        display: block;
+        padding: 8px 25px;
+        float: right;
+      }
+      #page-nav ul li {
+        display: block;
+      }
+    #page-nav #social-icons {
+        display: none;
+      }
+      #page-nav input:checked ~ ul {
+        display: block;
+        z-index: 999;
+        position: fixed;
+        background:  #e2e9fa;
+        width: 100%;
+        top: 0;
+      }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px){
     #test{

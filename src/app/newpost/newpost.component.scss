@@ -1,4 +1,54 @@
 
+
+#page-nav label, #hamburger {
+    display: none;
+  }
+
+.hiddenmenus{
+    display: none;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+}
+ul li a:hover{
+    background:  #999999;
+    color: white;
+}
+ul li ul.dropdown{
+    min-width: 100%; /* Set width of the dropdown */
+    background:  #e2e9fa;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    // left: 0;
+}
+ul li:hover ul.dropdown{
+    display: block;	/* Display the dropdown */
+    white-space: nowrap;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+.hidespost{
+    display: none !important;
+}
+a:hover{
+    cursor: pointer;
+}
 #firstHeader{
     background: #e2e9fa;
     position: sticky;
@@ -17,35 +67,94 @@
     text-decoration: none;
     color: unset
 }
+.signoutbutton{
+    color:red !important;
+}
 @media only screen and (min-width: 320px) and (max-width: 479px) {
     #test{
         padding: 25px;
     }
+    a:hover{
+        cursor: pointer
+    }
     #social-icons span{
         display: none;
     }
-    .create-post-title>input{
-        border: 0.5px solid #333333;
-        outline: none;
+    .hidepost{
+        display: none !important;
     }
-    .create-post-textarea>textarea{
-        border: 0.5px solid #333333;
-        outline: none;
+    .hamburgerguy{
+        margin-left: auto;
+
     }
+    
+    #page-nav label {
+        display: block;
+        padding: 8px 25px;
+        float: right;
+      }
+      #page-nav ul li {
+        display: block;
+      }
+    #page-nav #social-icons {
+        display: none;
+      }
+      #page-nav input:checked ~ ul {
+        display: block;
+        z-index: 999;
+        position: fixed;
+        background:  #e2e9fa;
+        width: 100%;
+        top: 0;
+      }
+}
+#goHome{
+    display: flex !important;
+}
+#goHome a{
+    text-transform:uppercase; font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+#goHome label{
+    margin-left:auto;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px){
     #test{
         padding: 25px;
     }
+    #page-nav label {
+        display: block;
+        padding: 8px 25px;
+        float: right;
+      }
+      #page-nav ul li {
+        display: block;
+      }
+    #page-nav #social-icons {
+        display: none;
+      }
+      #page-nav input:checked ~ ul {
+        display: block;
+        z-index: 999;
+        position: fixed;
+        background:  #e2e9fa;
+        width: 100%;
+        top: 0;
+      }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px){
     #test{
         padding: 25px;
     }
+    .hidespost{
+        display: none !important;
+    }
 }
 nav{
-    background: #6389e1;
-    padding: 1rem;
+    background:  #e2e9fa
+}
+.dropdown-divider{
+    border: 1px solid black
 }
 li{
     list-style-type: none;
@@ -56,15 +165,9 @@ li{
     display: flex;
 }
 #social-icons a{
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-}
-#social-icons span{
-    background: #333333;
-    padding: 5px;
     text-transform: uppercase;
-    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 .secondnav{
     max-width: 1200px;
@@ -73,12 +176,12 @@ li{
     display: flex;
 }
 .secondnav-first a{
-    color: white;
     font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
     padding-right: 2rem;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
 }
 
 .subscription-form{

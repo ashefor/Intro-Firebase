@@ -1,23 +1,46 @@
 <div>
   <div id="firstHeader">
-    <nav>
-      <div class="secondnav">
-        <div class="secondnav-first">
-          <a href="">Newbie.Tech</a>
-        </div>
-        <div id="social-icons">
-          <div><span>
-              <a href="new"> Write a post</a>
-            </span></div>
-          <div>
-            <a href=""><i class="fa fa-twitter"></i></a>
-            <a href=""><i class="fa fa-facebook"></i></a>
-            <a href=""><i class="fa fa-instagram"></i></a>
+      <nav id="page-nav">
+          <label for="hamburger">&#9776;</label>
+          <input  type="checkbox" id="hamburger"/>
+          <ul class="hiddenmenus">
+              <li id="goHome">
+                <div>
+                    <a href="" >Newbie.Tech</a>
+                </div>
+                <label for="hamburger">&#9776;</label>
+              </li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="new">Write a Post</a></li>
+              <div class="dropdown-divider"></div>
+              <li><a href="#" class="signoutbutton">Sign Out</a></li>
+          </ul>
+        <div class="secondnav">
+          <div class="secondnav-first">
+            <ul>
+              <li><a href="">Newbie.Tech</a></li>
+            </ul>
           </div>
-
+          <div id="social-icons">
+            <div class="">
+                <ul>
+                    <li><a href="new" class="hidepost">Write a Post</a></li>
+                    <li>
+                        <a><i class="fa fa-user"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="new" class="hidespost">Write a Post</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a href="#" class="signoutbutton">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
   </div>
   <div class="container">
     <div class="create-post-form">
