@@ -78,6 +78,9 @@ a:hover{
     .hidepost{
         display: none !important;
     }
+    ul li ul.dropdown{
+        display: block;
+    }
     // #page-nav label {
     //     display: inline-block;
     //   }
