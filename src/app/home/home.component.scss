@@ -2,6 +2,13 @@
 #page-nav label, #hamburger {
     display: none;
   }
+.hamburgerguy{
+    display: none;
+
+}
+.hiddenmenus{
+    display: none;
+}
 
 ul{
     padding: 0;
@@ -78,25 +85,28 @@ a:hover{
     .hidepost{
         display: none !important;
     }
-    ul li ul.dropdown{
-        display: block;
+    .hamburgerguy{
+        margin-left: auto;
+
     }
-    .fa .fa-user{
-        padding: 50px;
-    }
-    // #page-nav label {
-    //     display: inline-block;
-    //   }
-    //   #page-nav ul li {
-    //     display: block;
-    //   }
-    //   #page-nav #social-icons {
-    //     display: none;
-    //   }
-    //   #page-nav input:checked ~ ul {
-    //     display: block;
-    //   }
     
+    #page-nav label {
+        display: inline-block;
+      }
+      #page-nav ul li {
+        display: block;
+      }
+    #page-nav #social-icons {
+        display: none;
+      }
+      #page-nav input:checked ~ ul {
+        display: block;
+        z-index: 999;
+        position: fixed;
+        background:  #e2e9fa;
+        width: 100%;
+        margin-top:40px;
+      }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px){
     #test{

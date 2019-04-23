@@ -2,8 +2,15 @@
 <div>
   <div id="firstHeader">
     <nav id="page-nav">
-        <!-- <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/> -->
+        <label style="float: right" for="hamburger">&#9776;</label>
+        <input style="margin-left:auto" type="checkbox" id="hamburger"/>
+        <ul class="hiddenmenus">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="new" class="hidespost">Write a Post</a></li>
+            <div class="dropdown-divider"></div>
+            <li><a href="#" class="signoutbutton">Sign Out</a></li>
+        </ul>
       <div class="secondnav">
         <div class="secondnav-first">
           <ul>
@@ -26,6 +33,13 @@
                   </li>
               </ul>
           </div>
+        </div>
+        <div class="hamburgerguy">
+          <ul>
+            <li>
+                <a><input type="checkbox"></a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
