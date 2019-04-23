@@ -8,12 +8,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  
+  showmenu = false;
+  showmenu2 = true;
   hidepost= false;
   constructor(private http: HttpClient, private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.resizeWindow()
+    // this.resizeWindow()
   }
 
   // callApi(){
@@ -35,9 +36,9 @@ export class HomeComponent implements OnInit {
   }
   resizeWindow(){
     if(window.outerWidth <= 479){
-        this.hidepost = true;
+        this.showmenu = true;
     }else{
-      this.hidepost = false;
+      this.showmenu2 = false;
     }
   }
 

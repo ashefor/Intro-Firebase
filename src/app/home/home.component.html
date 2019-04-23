@@ -1,34 +1,40 @@
 <app-loader></app-loader>
 <div>
   <div id="firstHeader">
-    <nav>
+    <nav id="page-nav">
+        <!-- <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/> -->
       <div class="secondnav">
         <div class="secondnav-first">
-          <a href="">Newbie.Tech</a>
+          <ul>
+            <li><a href="">Newbie.Tech</a></li>
+          </ul>
         </div>
         <div id="social-icons">
-          <div><span>
-              <a href="new"> Write a post</a>
-            </span></div>
-          <div class="dropdown">
-            <a href=""><i class="fa fa-twitter"></i></a>
-            <a href=""><i class="fa fa-facebook"></i></a>
-            <a class="hoveroverme"> <i class="fa fa-user" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false" (click)="default($event)"></i>
-              <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">
-                <a href="">Dashboard</a>
-                <a href="">Settings</a>
-                <a href="new" *ngIf="hidepost">Write a Post</a>
-                <div class="dropdown-divider"></div>
-                <a href="">Sign Out</a>
-              </div>
-            </a>
+          <div class="">
+              <ul>
+                  <li><a href="new" class="hidepost">Write a Post</a></li>
+                  <li>
+                      <a><i class="fa fa-user"></i></a>
+                      <ul class="dropdown">
+                          <li><a href="#">Dashboard</a></li>
+                          <li><a href="#">Settings</a></li>
+                          <li><a href="new" class="hidespost">Write a Post</a></li>
+                          <div class="dropdown-divider"></div>
+                          <li><a href="#" class="signoutbutton">Sign Out</a></li>
+                      </ul>
+                  </li>
+              </ul>
           </div>
-
         </div>
       </div>
     </nav>
+  </div>
+  <div *ngIf="showmenu" style="display:block; float: right; right: -3px; z-index: 1;position: fixed">
+      <p><a href="">Dashboard</a></p>
+      <p><a href="">Settings</a></p>
+      <p><a href="new">Write a Post</a></p>
+      <p><a href="">Sign Out</a></p>
   </div>
   <div class="container">
     <div class="card">
