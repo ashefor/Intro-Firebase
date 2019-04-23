@@ -64,4 +64,7 @@ export class NewpostComponent implements OnInit {
     this.publishpost = event.srcElement.value;
     console.log(this.publishpost)
   }
+  subscribe(){
+    console.log(this.subscriptionForm.value)
+  }
 }

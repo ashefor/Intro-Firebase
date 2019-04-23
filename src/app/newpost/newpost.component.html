@@ -63,7 +63,7 @@
           me. It's easy.</p>
       </div>
       <div class="subscription-form">
-        <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="subscriptionForm" (ngSubmit)="subscribe()">
           <input type="text" name="" id="" placeholder="Enter your email here" formControlName="email">
           <button class="btn" type="submit" [disabled]="!subscriptionForm.valid"> Subscribe Now </button>
         </form>
