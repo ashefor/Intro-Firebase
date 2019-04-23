@@ -14,6 +14,8 @@ import { LoaderServiceService } from './services/loader-service.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { AboutComponent } from './about/about.component';
+import { NewpostComponent } from './newpost/newpost.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AboutComponent } from './about/about.component';
     SignupComponent,
     PagenotfoundComponent,
     LoaderComponent,
-    AboutComponent
+    AboutComponent,
+    NewpostComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,

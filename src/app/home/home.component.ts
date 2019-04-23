@@ -8,10 +8,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  
+  hidepost= false;
   constructor(private http: HttpClient, private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.resizeWindow()
   }
 
   // callApi(){
@@ -27,4 +29,25 @@ export class HomeComponent implements OnInit {
   submitForm(){
     window.alert('me')
   }
+
+  default(event){
+    event.preventDefault()
+  }
+  resizeWindow(){
+    if(window.outerWidth <= 479){
+        this.hidepost = true;
+    }else{
+      this.hidepost = false;
+    }
+  }
+
+  // closedrop(event){
+  //   let box = document.querySelector('.dropdown-content')
+  //   document.addEventListener("click", (event)=>{
+  //     if(event.target.className === '.dropdown.content'){
+  //       box.classList.add(".hide")
+  //       console.log(event.target.className)
+  //     }
+  //   })
+  // }
 }
