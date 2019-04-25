@@ -24,18 +24,21 @@ export class HomeComponent implements OnInit {
   }
 
   onMouseEnter() {
+    let parent = ( <HTMLElement>event.target ).parentElement;
     let box1 = document.getElementById('box1')
     let box3 = document.querySelectorAll('.side-containers-content')
     let box = document.getElementById('lightmenu')
     let box2 = document.getElementById('side-container-right')
     let children = box3[1]
+    console.log(parent)
     //  alert("Don't touch my bacon!");
      if(event.target == box){
       // box.style.display = 'none';
       console.log('test')
       box2.style.display = 'block'
-     }else if(event.target == box2){
-      box2.style.display = 'none'
+     }else if(event.currentTarget){
+       console.log(event.currentTarget)
+      // box2.style.display = 'none'
      }
      
   }
