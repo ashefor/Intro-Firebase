@@ -2,21 +2,21 @@
 <div>
   <div id="firstHeader">
     <nav id="page-nav">
-        <label for="hamburger">&#9776;</label>
-        <input  type="checkbox" id="hamburger"/>
-        <ul class="hiddenmenus">
-            <li id="goHome">
-              <div>
-                  <a href="" >Newbie.Tech</a>
-              </div>
-              <label for="hamburger">&#9776;</label>
-            </li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="new">Write a Post</a></li>
-            <div class="dropdown-divider"></div>
-            <li><a href="#" class="signoutbutton">Sign Out</a></li>
-        </ul>
+      <label for="hamburger">&#9776;</label>
+      <input type="checkbox" id="hamburger" />
+      <ul class="hiddenmenus">
+        <li id="goHome">
+          <div>
+            <a href="">Newbie.Tech</a>
+          </div>
+          <label for="hamburger">&#9776;</label>
+        </li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="new">Write a Post</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a href="#" class="signoutbutton">Sign Out</a></li>
+      </ul>
       <div class="secondnav">
         <div class="secondnav-first">
           <ul>
@@ -25,214 +25,267 @@
         </div>
         <div id="social-icons">
           <div class="">
-              <ul>
-                  <li><a href="new" class="hidepost">Write a Post</a></li>
-                  <li>
-                      <a><i class="fa fa-user"></i></a>
-                      <ul class="dropdown">
-                          <li><a href="#">Dashboard</a></li>
-                          <li><a href="#">Settings</a></li>
-                          <li><a href="new" class="hidespost">Write a Post</a></li>
-                          <div class="dropdown-divider"></div>
-                          <li><a href="#" class="signoutbutton">Sign Out</a></li>
-                      </ul>
-                  </li>
-              </ul>
+            <ul>
+              <li><a href="new" class="hidepost">Write a Post</a></li>
+              <li>
+                <a><i class="fa fa-user"></i></a>
+                <ul class="dropdown">
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="new" class="hidespost">Write a Post</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a href="#" class="signoutbutton">Sign Out</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </nav>
   </div>
   <div *ngIf="showmenu" style="display:block; float: right; right: -3px; z-index: 1;position: fixed">
-      <p><a href="">Dashboard</a></p>
-      <p><a href="">Settings</a></p>
-      <p><a href="new">Write a Post</a></p>
-      <p><a href="">Sign Out</a></p>
+    <p><a href="">Dashboard</a></p>
+    <p><a href="">Settings</a></p>
+    <p><a href="new">Write a Post</a></p>
+    <p><a href="">Sign Out</a></p>
   </div>
-  <div class="container">
-    <div class="card">
-      <div class="card-body">
-        <div class="admin-share-post">
-          <div>
-            <span>Apr 20</span>
+  <div class="body-container" id="body-container">
+    <!-- <label for="lightning"><img src="../../assets/lightning.png" alt="" srcset="" width="30px" height="30px"></label>
+      <input  type="checkbox" id="lightning"/> -->
+      <input type="checkbox" id="stack" />
+    <div class="side-containers" id="side-container-left">
+      <div>
+          
+        <div class="side-containers-content">
+          <div class="connect-with-us">
+            Connect with Us
+            <hr>
           </div>
-          <div class="share-post dropdown">
-            <i class="fa fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false" tabindex="-1"></i>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-              <span data-toggle="modal" data-target="#socialMediaShareModal" class="sharethispost"><i
-                  class="fas fa-share-alt"></i> Share post</span>
+          <div class="connect justify-content-between">
+            <a href=""><img src="../../assets/twitter.png" alt="Twitter logo"></a>
+            <a href=""><img src="../../assets/facebook.png" alt="Facebook logo"></a>
+            <a href=""><img src="../../assets/instagram.png" alt="instagram logo"></a>
+            <a href=""><img src="../../assets/linkedin.png" alt="Linkedin logo"></a>
+          </div>
+          <div class="side-connect">
+            <a href="">About Us</a>
+            <a href="">Privacy</a>
+            <a href="">Uhm</a>
+            <a href="">Yeah</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div style="display:flex">
+        <div>
+          <label for="stack"><img src="../../assets/stack.png" alt="" srcset="" width="30px" height="30px"></label>
+          
+        </div>
+        <div style="margin-left:auto">
+          <label for="lightning" ><img id="lightmenu" src="../../assets/lightning.png" alt="" srcset="" width="30px"
+              height="30px"></label>
+        </div>
+
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="admin-share-post">
+            <div>
+              <span>Apr 20</span>
             </div>
-            <div class="modal fade" id="socialMediaShareModal" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <div class="share-post-icons">
-                      <div class="twitter"> <a href=""><i class="fa fa-twitter"></i></a></div>
-                      <div class="facebook"> <a href=""><i class="fa fa-facebook"></i></a></div>
+            <div class="share-post dropdown">
+              <i class="fa fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" tabindex="-1"></i>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <span data-toggle="modal" data-target="#socialMediaShareModal" class="sharethispost"><i
+                    class="fas fa-share-alt"></i> Share post</span>
+              </div>
+              <div class="modal fade" id="socialMediaShareModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <div class="share-post-icons">
+                        <div class="twitter"> <a href=""><i class="fa fa-twitter"></i></a></div>
+                        <div class="facebook"> <a href=""><i class="fa fa-facebook"></i></a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <h4 class="card-title">Lorem Ipsum</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt error quia!
-          Nihil quam possimus obcaecati explicabo suscipit quasi ex numquam ullam sed eos placeat, blanditiis
-          aliquid velit ut aliquam.</p>
-        <hr>
-        <div class="card-bottom">
-          <div>
-            <span>300 views</span>
-          </div>
-          <!-- <div>
+          <h4 class="card-title">Lorem Ipsum</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt error quia!
+            Nihil quam possimus obcaecati explicabo suscipit quasi ex numquam ullam sed eos placeat, blanditiis
+            aliquid velit ut aliquam.</p>
+          <hr>
+          <div class="card-bottom">
+            <div>
+              <span>300 views</span>
+            </div>
+            <!-- <div>
                       <textarea name="" id="" cols="30" rows="" placeholder="write a comment"></textarea>
                   </div> -->
-          <div class="post-likes">
-            <i class="fa fa-heart"></i>
+            <div class="post-likes">
+              <i class="fa fa-heart"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <div class="admin-share-post">
-          <div>
-            <span>Apr 20</span>
-          </div>
-          <div class="share-post dropdown">
-            <i class="fa fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false" tabindex="-1"></i>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-              <span data-toggle="modal" data-target="#socialMediaShareModal" class="sharethispost"><i
-                  class="fas fa-share-alt"></i> Share post</span>
+      <div class="card">
+        <div class="card-body">
+          <div class="admin-share-post">
+            <div>
+              <span>Apr 20</span>
             </div>
-            <div class="modal fade" id="socialMediaShareModal" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class=" share-post-icons">
-                      <div class="twitter"> <a href=""><i class="fa fa-twitter"></i></a></div>
-                      <div class="facebook"> <a href=""><i class="fa fa-facebook"></i></a></div>
+            <div class="share-post dropdown">
+              <i class="fa fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" tabindex="-1"></i>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <span data-toggle="modal" data-target="#socialMediaShareModal" class="sharethispost"><i
+                    class="fas fa-share-alt"></i> Share post</span>
+              </div>
+              <div class="modal fade" id="socialMediaShareModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class=" share-post-icons">
+                        <div class="twitter"> <a href=""><i class="fa fa-twitter"></i></a></div>
+                        <div class="facebook"> <a href=""><i class="fa fa-facebook"></i></a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <h4 class="card-title">Lorem Ipsum</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt error quia!
-          Nihil quam possimus obcaecati explicabo suscipit quasi ex numquam ullam sed eos placeat, blanditiis
-          aliquid velit ut aliquam.</p>
-        <hr>
-        <div class="card-bottom">
-          <div>
-            <span>300 views</span>
-          </div>
-          <!-- <div>
+          <h4 class="card-title">Lorem Ipsum</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt error quia!
+            Nihil quam possimus obcaecati explicabo suscipit quasi ex numquam ullam sed eos placeat, blanditiis
+            aliquid velit ut aliquam.</p>
+          <hr>
+          <div class="card-bottom">
+            <div>
+              <span>300 views</span>
+            </div>
+            <!-- <div>
                           <textarea name="" id="" cols="30" rows="" placeholder="write a comment"></textarea>
                       </div> -->
-          <div class="post-likes">
-            <i class="fa fa-heart"></i>
+            <div class="post-likes">
+              <i class="fa fa-heart"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <div class="admin-share-post">
-          <div>
-            <span>Apr 20</span>
-          </div>
-          <div class="share-post dropdown">
-            <i class="fa fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false" tabindex="-1"></i>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-              <span data-toggle="modal" data-target="#socialMediaShareModal" class="sharethispost"><i
-                  class="fas fa-share-alt"></i> Share post</span>
+      <div class="card">
+        <div class="card-body">
+          <div class="admin-share-post">
+            <div>
+              <span>Apr 20</span>
             </div>
-            <div class="modal fade" id="socialMediaShareModal" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class=" share-post-icons">
-                      <div class="twitter"> <a href=""><i class="fa fa-twitter"></i></a></div>
-                      <div class="facebook"> <a href=""><i class="fa fa-facebook"></i></a></div>
+            <div class="share-post dropdown">
+              <i class="fa fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" tabindex="-1"></i>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <span data-toggle="modal" data-target="#socialMediaShareModal" class="sharethispost"><i
+                    class="fas fa-share-alt"></i> Share post</span>
+              </div>
+              <div class="modal fade" id="socialMediaShareModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class=" share-post-icons">
+                        <div class="twitter"> <a href=""><i class="fa fa-twitter"></i></a></div>
+                        <div class="facebook"> <a href=""><i class="fa fa-facebook"></i></a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <h4 class="card-title">Lorem Ipsum</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt error quia!
-          Nihil quam possimus obcaecati explicabo suscipit quasi ex numquam ullam sed eos placeat, blanditiis
-          aliquid velit ut aliquam.</p>
-        <hr>
-        <div class="card-bottom">
-          <div>
-            <span>300 views</span>
-          </div>
-          <!-- <div>
+          <h4 class="card-title">Lorem Ipsum</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt error quia!
+            Nihil quam possimus obcaecati explicabo suscipit quasi ex numquam ullam sed eos placeat, blanditiis
+            aliquid velit ut aliquam.</p>
+          <hr>
+          <div class="card-bottom">
+            <div>
+              <span>300 views</span>
+            </div>
+            <!-- <div>
                               <textarea name="" id="" cols="30" rows="" placeholder="write a comment"></textarea>
                           </div> -->
-          <div class="post-likes">
-            <i class="fa fa-heart"></i>
+            <div class="post-likes">
+              <i class="fa fa-heart"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <div class="admin-share-post">
-          <div>
-            <span>Apr 20</span>
-          </div>
-          <div class="share-post dropdown">
-            <i class="fa fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false" tabindex="-1"></i>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-              <span data-toggle="modal" data-target="#socialMediaShareModal" class="sharethispost"><i
-                  class="fas fa-share-alt"></i> Share post</span>
+      <div class="card">
+        <div class="card-body">
+          <div class="admin-share-post">
+            <div>
+              <span>Apr 20</span>
             </div>
-            <div class="modal fade" id="socialMediaShareModal" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class=" share-post-icons">
-                      <div class="twitter"> <a href=""><i class="fa fa-twitter"></i></a></div>
-                      <div class="facebook"> <a href=""><i class="fa fa-facebook"></i></a></div>
+            <div class="share-post dropdown">
+              <i class="fa fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" tabindex="-1"></i>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <span data-toggle="modal" data-target="#socialMediaShareModal" class="sharethispost"><i
+                    class="fas fa-share-alt"></i> Share post</span>
+              </div>
+              <div class="modal fade" id="socialMediaShareModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class=" share-post-icons">
+                        <div class="twitter"> <a href=""><i class="fa fa-twitter"></i></a></div>
+                        <div class="facebook"> <a href=""><i class="fa fa-facebook"></i></a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <h4 class="card-title">Lorem Ipsum</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt error quia!
-          Nihil quam possimus obcaecati explicabo suscipit quasi ex numquam ullam sed eos placeat, blanditiis
-          aliquid velit ut aliquam.</p>
-        <hr>
-        <div class="card-bottom">
-          <div>
-            <span>300 views</span>
-          </div>
-          <!-- <div>
+          <h4 class="card-title">Lorem Ipsum</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt error quia!
+            Nihil quam possimus obcaecati explicabo suscipit quasi ex numquam ullam sed eos placeat, blanditiis
+            aliquid velit ut aliquam.</p>
+          <hr>
+          <div class="card-bottom">
+            <div>
+              <span>300 views</span>
+            </div>
+            <!-- <div>
                                   <textarea name="" id="" cols="30" rows="" placeholder="write a comment"></textarea>
                               </div> -->
-          <div class="post-likes">
-            <i class="fa fa-heart"></i>
+            <div class="post-likes">
+              <i class="fa fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <input type="checkbox" id="lightning" /> -->
+    <div class="side-containers" id="side-container-right">
+      <div id="box1">
+        <div class="side-containers-content">
+          <div class="text-center">
+            <span>Join Us</span>
+          </div>
+          <div class="signinButtons">
+            <button class="btn btn-outline-primary signin" id="signin" type="button">Sign in with Twitter</button>
+            <button class="btn btn-outline-primary signin" type="button">Sign in with Twitter</button>
           </div>
         </div>
       </div>
