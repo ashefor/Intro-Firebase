@@ -36,9 +36,8 @@ export class HomeComponent implements OnInit {
       // box.style.display = 'none';
       console.log('test')
       box2.style.display = 'block'
-     }else if(event.currentTarget){
-       console.log(event.currentTarget)
-      // box2.style.display = 'none'
+     }else if(event.target == box2){
+      box2.style.display = 'none'
      }
      
   }
