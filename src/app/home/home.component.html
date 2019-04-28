@@ -79,13 +79,18 @@
     <div class="container">
       <div style="display:flex">
         <div>
-          <label for="stack">&#9964;</label>
+          <label for="stack" id="leftmenu">&#9964;</label>
           
         </div>
         <div style="margin-left:auto">
-          <label for="lightning" id="lightmenu">&#9889;</label>
+          <label for="lightning" id="rightmenu">&#9889;</label>
         </div>
 
+      </div>
+      <div *ngFor="let posts of allposts">
+        <div>
+          {{posts.description}}
+        </div>
       </div>
       <div class="card">
         <div class="card-body">
@@ -124,14 +129,14 @@
             aliquid velit ut aliquam.</p>
           <hr>
           <div class="card-bottom">
-            <div>
-              <span>300 views</span>
+            <div *ngFor="let like of likestotalcount; let position = index">
+              <span>{{like}}</span>
             </div>
             <!-- <div>
                       <textarea name="" id="" cols="30" rows="" placeholder="write a comment"></textarea>
                   </div> -->
             <div class="post-likes">
-              <i class="fa fa-heart"></i>
+             <button (click)="addLikes()"><i class="fa fa-heart"></i></button>
             </div>
           </div>
         </div>
@@ -177,7 +182,7 @@
                           <textarea name="" id="" cols="30" rows="" placeholder="write a comment"></textarea>
                       </div> -->
             <div class="post-likes">
-              <i class="fa fa-heart"></i>
+              <a ><i class="fa fa-heart"></i></a>
             </div>
           </div>
         </div>
@@ -265,9 +270,6 @@
             <div>
               <span>300 views</span>
             </div>
-            <!-- <div>
-                                  <textarea name="" id="" cols="30" rows="" placeholder="write a comment"></textarea>
-                              </div> -->
             <div class="post-likes">
               <i class="fa fa-heart"></i>
             </div>
@@ -277,13 +279,13 @@
     </div>
     <!-- <input type="checkbox" id="lightning" /> -->
     <div class="side-containers" id="side-container-right">
-      <div id="box1">
+      <div>
         <div class="side-containers-content">
-          <div class="text-center">
-            <span>Join Us</span>
+          <div class="text-center" >
+            <span >Join Us</span>
           </div>
-          <div class="signinButtons">
-            <button class="btn btn-outline-primary signin" id="signin" type="button">Sign in with Twitter</button>
+          <div class="signinButtons" >
+            <button class="btn btn-outline-primary signin" type="button">Sign in with Twitter</button>
             <button class="btn btn-outline-primary signin" type="button">Sign in with Twitter</button>
           </div>
         </div>

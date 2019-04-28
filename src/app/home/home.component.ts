@@ -11,7 +11,8 @@ export class HomeComponent implements OnInit {
   showmenu = false;
   showmenu2 = true;
   hidepost = false;
-  
+  likescount = []
+  likestotalcount = []
 
   constructor(private http: HttpClient, private fb: FormBuilder, private element: ElementRef) {}
 
@@ -24,22 +25,32 @@ export class HomeComponent implements OnInit {
   }
 
   onMouseEnter() {
-    let parent = ( <HTMLElement>event.target ).parentElement;
-    let box1 = document.getElementById('box1')
-    let box3 = document.querySelectorAll('.side-containers-content')
-    let box = document.getElementById('lightmenu')
-    let box2 = document.getElementById('side-container-right')
-    let children = box3[1]
-    console.log(parent)
+    const openrightmenu = document.getElementById('rightmenu')
+    const openleftmenu = document.getElementById('leftmenu')
+    const rightmenu = document.getElementById('side-container-right')
+    const leftmenu = document.getElementById('side-container-left')
     //  alert("Don't touch my bacon!");
-     if(event.target == box){
+     if(event.target == openrightmenu){
       // box.style.display = 'none';
-      console.log('test')
-      box2.style.display = 'block'
-     }else if(event.target == box2){
-      box2.style.display = 'none'
+      rightmenu.style.display = 'block'
+     }if(event.target == openleftmenu){
+      // box.style.display = 'none';
+      leftmenu.style.display = 'block'
+     }if(event.target == rightmenu){
+      rightmenu.style.display = 'none'
+     }if(event.target == leftmenu){
+      leftmenu.style.display = 'none'
+     }else{
+       return;
      }
      
+  }
+  addLikes(){
+    this.likescount.length++
+    // console.log(this.likescount)
+    this.likestotalcount.unshift(this.likescount.length)
+    console.log(this.likestotalcount[0])
+    console.log(this.likestotalcount)
   }
   
   // callApi(){

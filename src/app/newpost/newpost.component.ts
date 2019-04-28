@@ -10,18 +10,14 @@ import { Router } from '@angular/router';
 export class NewpostComponent implements OnInit {
 
   public publishpost: any[];
+  allpost = [];
+  test = [];
   constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.publishpost;
     console.log(this.publishpost);
-    // this.select(Event.target)
   }
-  // auto_grow(element) {
-  //   element.style.height = "5px";
-  //   element.style.height = (element.scrollHeight)+"px";
-  // }
-
   auto_grow(event){
     // console.log(event)
     event.target.style.height = "auto"
@@ -48,18 +44,17 @@ export class NewpostComponent implements OnInit {
     const mail = this.f.title.value;
     const description = this.f.description.value;
     const publish = this.f.publish.value;
-    if((this.f.publish.value === 'no') || (this.f.publish.value !== "yes") ){
-      window.alert('Saved Post')
+    if(this.f.publish.value === 'yes' ){
+      // this.router.navigate(['home']);
+      alert('Published Post')
+      console.log(this.allpost)
     }else{
-    // console.log(mail, description, publish)
     console.log(this.makeapost.value)
-    this.router.navigate(['articles'])
+    window.alert('Saved Post')
     }
   }
 
   select(event){
-    // console.log(event.target.value)
-    // event.srcElement.checked
     console.log(event)
     this.publishpost = event.srcElement.value;
     console.log(this.publishpost)
