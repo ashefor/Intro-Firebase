@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  countlikes = 0;
+  showCounts = false;
   showmenu = false;
   showmenu2 = true;
   hidepost = false;
@@ -46,11 +48,13 @@ export class HomeComponent implements OnInit {
      
   }
   addLikes(){
-    this.likescount.length++
-    // console.log(this.likescount)
-    this.likestotalcount.unshift(this.likescount.length)
-    console.log(this.likestotalcount[0])
-    console.log(this.likestotalcount)
+    this.countlikes++
+    if(this.countlikes === 0){
+      this.showCounts = false
+    }else{
+      this.showCounts = true
+    }
+    
   }
   
   // callApi(){

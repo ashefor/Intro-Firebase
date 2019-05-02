@@ -124,14 +124,14 @@
             aliquid velit ut aliquam.</p>
           <hr>
           <div class="card-bottom">
-            <div *ngFor="let like of likestotalcount; let position = index">
-              <span>{{like}}</span>
-            </div>
-            <!-- <div>
-                      <textarea name="" id="" cols="30" rows="" placeholder="write a comment"></textarea>
-                  </div> -->
+              <div>
+                  <span>300 views</span>
+                </div>
             <div class="post-likes">
-             <button (click)="addLikes()"><i class="fa fa-heart"></i></button>
+             <div style="display:flex">
+                <a (click)="addLikes()" aria-hidden="true"><i class="fa fa-heart"></i></a>
+                <small style="color:black !important; margin-left: 5px" *ngIf="showCounts">{{countlikes}}</small>
+             </div>
             </div>
           </div>
         </div>
